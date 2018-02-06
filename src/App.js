@@ -7,15 +7,15 @@ import Footer from './components/Footer';
 
 class App extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       profiles: []
-    };
+    }
   }
 
   componentDidMount() {
-    this.getDinosaurs();
+    this.getDinosaurs()
   }
 
   getDinosaurs = () => {
@@ -26,24 +26,23 @@ class App extends Component {
         this.setState({ profiles: cardData.map(card => {
           return {...card,...{styleCondition:true}}
         })
-      });
-      });
-  };
+      })
+      })
+  }
 
   toggleClass = (card) => {
     card.styleCondition = !card.styleCondition;
-    console.log(card.styleCondition);
-    this.setState({profiles: this.state.profiles});
+    this.setState({profiles: this.state.profiles})
   };
 
   render() {
     return (
       <div>
         <Header />
-        <Profiles profiles={this.state.profiles} toggleClass={this.toggleClass}/>
+        <Profiles profiles={this.state.profiles} toggleClass={this.toggleClass} />
         <Footer />
       </div>
-    );
+    )
   }
 }
 export default App;

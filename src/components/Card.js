@@ -4,7 +4,7 @@ export const Card = ({ card, toggleClass, styleCondition }) => {
   return <li onClick={() => toggleClass(card)}>
       <div className="profile-card">
         <header className="profile-header">
-          <img src={card.image} alt="poop" />
+          <img src={card.image} alt="card image" />
           <h2>{card.name}</h2>
         </header>
         <section className={styleCondition ? 'skills-container hidden' : 'skills-container'}>
