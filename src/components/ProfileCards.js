@@ -1,8 +1,7 @@
 import React from 'react';
-import {Card} from './Card';
+import { Card } from './Card';
 
 class ProfileCards extends React.Component {
-
   render() {
     return (
       <ul id="profiles">
