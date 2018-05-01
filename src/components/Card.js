@@ -1,4 +1,5 @@
 import React from 'react';
+import SkillList from "./SkillList";
 
 export const Card = ({ card, toggleClass, styleCondition }) => {
   return <li onClick={() => toggleClass(card)}>
@@ -8,8 +9,7 @@ export const Card = ({ card, toggleClass, styleCondition }) => {
           <h2>{card.name}</h2>
         </header>
         <section className={styleCondition ? 'skills-container hidden' : 'skills-container'}>
-          <h4>Skills</h4>
-          <ul className="skills-list">{card.skills.map((skill, i) => <li key={i}>{skill}</li>)}</ul>
+          < SkillList card={card} />
         </section>
       </div>
     </li>;
